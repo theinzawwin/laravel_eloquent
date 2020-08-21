@@ -17,3 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::resource('students','StudentController');
+Route::resource('customers','CustomerController');
+Route::post('/saveAjax','CustomerController@saveAjax');
+Route::get('/customerList','CustomerController@showCustomerList');
+Route::get('/findCustomer/{id}','CustomerController@findCustomerById');
+Route::get('customer_view','CustomerController@ajaxIndex');
